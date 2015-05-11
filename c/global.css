@@ -6,8 +6,7 @@
 @charset "utf-8";
 
 body{
-  text-align: left;
-  z-index: -9999;
+  text-align: center;
 }
 .wrapper{
   width: 1000px;
@@ -15,33 +14,15 @@ body{
   margin: 30px auto;
 }
 .splash{
-  background: url(../i/foodplate.jpg);
+  background: url(../i/foodplate_op30.png);
 }
-.top{
+.top_wrapper{
   background: #fff;
   padding: 30px 100px;
+  text-align: center;
 }
 .logo{
-  width: 240px;
-}
-.nav{
-  margin-top: 40px;
-  text-transform: uppercase;
-  float: right;
-  font-size: 15px;
-  font-family: 'PT Sans', sans-serif;
-}
-.nav a{
-  color: #000;
-  padding-right: 20px;
-  -webkit-transition: color 0.5s;
-  transition: color 0.5s;
-}
-.nav a:hover{
-  color: red;
-  text-decoration: none;
-  -webkit-transition: color 1.5s;
-  transition: color 1.5s;
+  width: 180px;
 }
 .mid{
   text-align: center;
@@ -49,6 +30,11 @@ body{
 .slogan{
   margin: 105px 0 160px;
   text-align: center;
+  color: #fff;
+  font-weight: 100;
+  text-shadow: 1px 1px 5px #000;
+}
+.notice{
   color: #fff;
   font-weight: 100;
   text-shadow: 1px 1px 5px #000;
@@ -68,4 +54,18 @@ a.join:hover{
   border: 1px solid #000;
   -webkit-transition: color 1.5s, border 2s; 
   transition: color 1.5s, border 2s;
+}
+/*.subscription_wrapper{
+  width: 600px;
+  margin: 20px auto;
+  padding: 10px;
+  background: rgba(0,0,0, 0.1);
+}*/
+.subscription{
+  margin: 0 auto;
+}
+.subscription_email{
+  color: #fff;
+  background: rgba(0, 0, 0, 0);
+  width: 400px !important;
 }

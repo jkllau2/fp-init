@@ -6,14 +6,43 @@ input:focus{
 thead{
 	font-weight: bold;
 }
-.btn, .btn-primary{
-	background: #4d90fe;
+*::-webkit-input-placeholder {
+    color: #e5e5e5 !important;
 }
-.btn:visited, .btn:hover, .btn:active, .btn:focus, .btn-primary:visited .btn-primary:hover, .btn-primary:active, .btn-primary:focus{ 
-	background: #1a70fe; 
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: #e5e5e5 !important;
 }
-.panel{
-	position: absolute;
-	width: 100px;
-	height: 100px;
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: #e5e5e5 !important;
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: #e5e5e5 !important;
+}
+.btn{
+	-webkit-transition: background 200ms;
+  	transition: background 200ms;
+}
+.btn:visited .btn:hover, .btn:active, .btn:focus{ 
+	-webkit-transition: background 200ms;
+  	transition: background 200ms;
+}
+.btn-danger{
+	background: #DF3A01;
+}
+.btn-danger:visited .btn-danger:hover, .btn-danger:active, .btn-danger:focus{ 
+	background: #B43104; 
+	outline: none;
+	border: none;
+}
+.form-control{
+	border-color: #cccccc;
+}
+.form-control:focus {
+  border-color: #ffffff;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.075);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(0,0,0,.075);
 }
