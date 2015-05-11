@@ -25,6 +25,7 @@ body{
   text-transform: uppercase;
   float: right;
   font-size: 15px;
+  font-family: 'PT Sans', sans-serif;
 }
 .nav a{
   color: #fff;
@@ -35,7 +36,6 @@ body{
 .nav a:hover{
   color: red;
   text-decoration: none;
-  font-weight: bold;
   -webkit-transition: color 1.5s;
   transition: color 1.5s;
 }
@@ -49,9 +49,10 @@ body{
   font-weight: 100;
 }
 a.join{
+  font-family: 'PT Sans', sans-serif;
   color: #fff;
   border: 1px solid #fff;
-  padding: 13px 25px;
+  padding: 11px 25px;
   -webkit-transition: color 1.2s, border 1.2s; 
   transition: color 1.2s, border 1.2s; 
 }
