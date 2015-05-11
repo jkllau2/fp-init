@@ -21,14 +21,14 @@ body{
   width: 240px;
 }
 .nav{
-  margin-top: 20px;
+  margin-top: 40px;
   text-transform: uppercase;
   float: right;
-  font-size: 16px;
+  font-size: 15px;
 }
 .nav a{
   color: #fff;
-  padding-right: 9px;
+  padding-right: 20px;
   -webkit-transition: color 0.5s;
   transition: color 0.5s;
 }
@@ -43,7 +43,7 @@ body{
   text-align: center;
 }
 .slogan{
-  margin: 75px 0 160px;
+  margin: 95px 0 160px;
   text-align: center;
   color: #fff;
   font-weight: 100;
