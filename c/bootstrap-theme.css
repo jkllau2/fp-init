@@ -1,0 +1,19 @@
+/* Overrides default bootstrap stylesheet */
+
+input:focus{
+	outline: none;	
+}
+thead{
+	font-weight: bold;
+}
+.btn, .btn-primary{
+	background: #4d90fe;
+}
+.btn:visited, .btn:hover, .btn:active, .btn:focus, .btn-primary:visited .btn-primary:hover, .btn-primary:active, .btn-primary:focus{ 
+	background: #1a70fe; 
+}
+.panel{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+}
