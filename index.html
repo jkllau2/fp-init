@@ -6,42 +6,44 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>FoodPose</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Raleway" />
-        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" type="text/css" href="c/global.css">
+
+        <!-- STYLE -->
+        <link href="http://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css" />
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'/>
+        <link href="c/global.css" rel="stylesheet" type="text/css" />
+
+        <!-- JS -->
         <script type="text/javascript" src="j/lib/angular.min.js"></script>
         <script type="text/javascript" src="j/lib/jquery.min.js"></script>
         <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>       
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <script type="text/javascript" src="j/main.js"></script>
         <style>
           body {
             font-family: 'Roboto' ;
           }
         </style>
     </head>
-    <body class="splash">
+    <body ng-app="fpApp" ng-controller="fpCtrl" class="big_wrapper">
             <div class="top_wrapper">
-                <img class="logo" src="i/logo.png" />
+                <img class="fp_logo" src="i/logo.png" alt="foodpose"/>
             </div>
-            <div class="wrapper">
-                <div class="mid">
-                    <h1 class="text-uppercase slogan">discover and share innovative receipes.</h1>
+            <div class="mid_wrapper">
+                    <h1 class="text-uppercase fp_slogan">discover and share innovative receipes.</h1>
 
                     <div class="subscription_wrapper">
-                        <h4 class="notice">We are working on something <strong>very interesting</strong>! We'll keep you posted.</h4>
-                        <form class="form-inline subscription">
-                            <div class="form-group">
-                                <input type="email" class="form-control subscription_email" placeholder="Your email here...">
+                        <h4 class="fp_notice">We are working on something <strong>very interesting</strong>! We'll keep you posted.</h4>
+                         <form class="form-inline fp_subscription">
+                             <div class="form-group">
+                                <input type="email" class="form-control fp_subscription_email" placeholder="Your email here...">
                             </div>
-                            <button type="submit" class="btn btn-danger">Notify Me!</button>
-                        </form>
-                    </div>
-                    
-                </div>      
+                             <button type="submit" class="btn btn-danger">Notify Me!</button>
+                         </form>
+                    </div>            
             </div>
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
