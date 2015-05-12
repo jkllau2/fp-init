@@ -17,20 +17,35 @@ app.directive('slogan', function () {
 app.directive('notice', function () {
   return {
     restrict: 'E',
-    template: '<h4 class="fp_notice">We are working on something <strong>very interesting</strong>! We&#39;ll keep you posted.</h4>'
+    template: '<h4 class="fp_notice">We are working on something <strong>very interesting</strong>! We&#39;ll \keep you posted.</h4>'
   };
 });
 
 app.directive('subscription', function () {
   return {
     restrict: 'E',
-    template: '<form ng-submit="processForm()" class="form-inline fp_subscription"><div class="form-group"><input ng-model="formData.email" name="email" type="email" class="form-control fp_subscription_email" placeholder="Your email here..."></div><button type="submit" class="btn btn-danger">Notify Me!</button></form>'
+    template: '<form ng-submit="processForm()" class="form-inline fp_subscription">\
+                  <div class="input-group">\
+                  <input ng-model="formData.email" name="email" type="email" class="form-control fp_subscription_email" placeholder="Your email here...">\
+                  <span class="input-group-btn">\
+                  <button ng-disabled="!(!!formData.email)" type="submit" class="btn btn-danger">\
+                  Notify Me!</button></span></div></form>'
+  };
+}); 
+
+app.directive('socialmedia', function () {
+  return {
+    restrict: 'E',
+    template: '<ul class="nav-pills col-md-6 col-md-offset-5 fp_social_wrapper">\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/facebook.png"></a></li>\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/twitter.png"></a></li>\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/googleplus.png"></a></li>\
+              </ul>'
   };
 });
 
 app.controller('fpCtrl', function($scope, $http) {
   $scope.formData = '';
-
   $scope.processForm = function() {
     $http({
       method  : 'POST',
@@ -40,9 +55,10 @@ app.controller('fpCtrl', function($scope, $http) {
       })
     .success(function(data) {
       console.log(data);
-        if (!data.success) {
+        if (data.success) {
           // if not successful, bind errors to error variables
           // $scope.errorEmail = data.errors.email;
+
         } else {
           // if successful, bind success message to message
           //$scope.message = data.message;

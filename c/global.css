@@ -61,3 +61,18 @@ body{
   background: rgba(0, 0, 0, 0);
   width: 400px !important;
 }
+.fp_social_wrapper{
+  margin-top: 25px;
+}
+.fp_social{
+  width: 30px;
+  height: 30px;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  filter: gray;
+}
+.fp_social:hover{
+  -webkit-filter: grayscale(0%);
+  filter: grayscale(0%);
+  filter: none;
+}
