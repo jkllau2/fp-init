@@ -1,5 +1,4 @@
 <?php
-
-$sql = "INSERT INTO email (Email)
-    VALUES ('1234@gmail.com')";
+$result = implode(",", $_POST);
+$sql = "INSERT INTO email (Email) VALUES ('$result')";
 ?>
