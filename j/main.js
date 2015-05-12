@@ -24,9 +24,31 @@ app.directive('notice', function () {
 app.directive('subscription', function () {
   return {
     restrict: 'E',
-    template: '<form class="form-inline fp_subscription"><div class="form-group"><input type="email" class="form-control fp_subscription_email" placeholder="Your email here..."></div><button type="submit" class="btn btn-danger">Notify Me!</button></form>'
+    template: '<form ng-submit="processForm()" class="form-inline fp_subscription"><div class="form-group"><input ng-model="formData.email" name="email" type="email" class="form-control fp_subscription_email" placeholder="Your email here..."></div><button type="submit" class="btn btn-danger">Notify Me!</button></form>'
   };
 });
 
-app.controller('fpCtrl', function($scope) {
+app.controller('fpCtrl', function($scope, $http) {
+  $scope.formData = '';
+
+  $scope.processForm = function() {
+    $http({
+      method  : 'POST',
+      url     : '/p/db.php',
+      data    : $.param($scope.formData),  // pass in data as strings
+      headers : { 'Content-Type': 'application/x-www-form-urlencoded' }  // set the headers so angular passing info as form data (not request payload)
+      })
+    .success(function(data) {
+      console.log(data);
+        if (!data.success) {
+          // if not successful, bind errors to error variables
+          // $scope.errorEmail = data.errors.email;
+        } else {
+          // if successful, bind success message to message
+          //$scope.message = data.message;
+        }
+    });
+  };
+
 });
+
