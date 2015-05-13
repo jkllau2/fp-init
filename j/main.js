@@ -37,9 +37,9 @@ app.directive('socialmedia', function () {
   return {
     restrict: 'E',
     template: '<ul class="nav-pills col-md-6 col-md-offset-5 fp_social_wrapper">\
-                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/facebook.png"></a></li>\
-                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/twitter.png"></a></li>\
-                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/googleplus.png"></a></li>\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/fb_bg.png"></a></li>\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/tw_bg.png"></a></li>\
+                  <li role="presentation"><a href="#"><img class="fp_social" src="i/icons/gp_bg.png"></a></li>\
               </ul>'
   };
 });
