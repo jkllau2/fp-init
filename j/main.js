@@ -60,7 +60,7 @@ app.controller('fpCtrl', function($scope, $http) {
           // if successful, set field to empty
           $scope.formData = null;
         } else {
-          
+          console.log("failed");
         }
     });
   };
